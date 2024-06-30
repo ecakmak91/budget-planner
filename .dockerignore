@@ -1,0 +1,7 @@
+# Belirli dizinleri göz ardı et
+node_modules/
+logs/
+
+!.dockerignore
+!Dockerfile
+**/*.yml

@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  budget-planner:
+    container_name: dc-budget-planner
+    build: .
+    ports: 
+      - 3000:3000
+    environment:
+      - TELEGRAM_TOKEN={YOUR_TOKEN_HERE}
+      - MONGO_HOST=mongodb
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=PlxG3B0KyuUclW5
+  mongodb:
+    image: mongo
+    ports: 
+      - 27017:27017
+    volumes:
+      - budget-planner-mongodb:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=PlxG3B0KyuUclW5
+volumes:
+  budget-planner-mongodb:

@@ -55,7 +55,6 @@ export class BudgetPlannerController {
           await this.budgetPlannerService
             .getExpensesBetweenDates(startDate, new Date())
             .then((e) => {
-              console.log(e);
               const sum: number = e.reduce((accumulator, currentValue) => {
                 return accumulator + currentValue.price;
               }, 0);
