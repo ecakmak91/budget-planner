@@ -39,6 +39,7 @@ docker-compose up
 
 ```bash
 - 19.23 food -> It saves food expense price is 19.23 euro
+- 18.81 -> It saves your expense without detail is 19.23 euro
 - reports
     - /reports day -> It shows your today expensens
     - /reports week -> It shows your week expensens
